@@ -66,26 +66,29 @@
     <script>
         function validateForm() {
           var x = document.forms["myForm"]["pwd"].value;
-          if (x == "1234") {
-           
-            return true;
+          if (x == "alohamora") {
+            window.location.assign("home.html");
+            //return true;
           }
-        else{
-        alert("Incorrect username or password");
-          return false;
+          else{
+            alert("Incorrect username or password");
+	          window.location.assign("index.html");
+          }
         }
-        }
-        </script>
-        </head>
-        <body>
-        
+    </script>        
           
       <div class="centered">
-        <form name="myForm" action="home.html" onsubmit="return validateForm()" method="post">
-        
-        <center> <p style="color:rgb(245, 225, 115); font-size:30px;"> Password</p> <input type="password" name="pwd">
-        <button class="button" value="Submit" style="vertical-align:middle"><span>Enter </span></button></center>
-        </form>
+        <form name="myForm" action="home.html" method="GET">
+
+          <br><br><br><br><br><br>
+          <p style="color:rgb(245, 225, 115); font-size:50px;"> Welcome Himanshi!</p> 
+          <input type="password" name="pwd"  size="30">
+          <br>
+          <h3>Please enter the password</h4>
+           
+          <button onclick="validateForm()" class="button" value="submit" style="vertical-align:middle"><span>Enter</span></button>
+          </form>
+
       </div>
 
   </div>
